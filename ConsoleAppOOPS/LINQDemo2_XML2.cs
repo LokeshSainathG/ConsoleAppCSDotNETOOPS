@@ -36,7 +36,7 @@ namespace ConsoleAppOOPS
         public int TotalMarks { get; set; }
         public static XStudent[] GetAllStudents()
         {
-            XStudent[] students = new XStudent[4];//To store 4 Student objects.
+            XStudent[] students = new XStudent[4];//Array of XStudent class type, to store 4 Student objects.
 
             students[0] = new XStudent { Id = 101, Name = "Mark", Gender = "Male", TotalMarks= 800 };
             students[1] = new XStudent { Id = 102, Name = "Rosy", Gender = "Female",TotalMarks= 900 };

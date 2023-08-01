@@ -59,5 +59,5 @@ namespace ConsoleAppOOPS
         }
     }
 }
-//Ancestor x Descendant/ Successor
+
 

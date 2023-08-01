@@ -29,6 +29,7 @@ namespace ConsoleAppOOPS
         private void Method2() { }//Scope restricted to class [Default scope for class members]
         internal void Method3() { }//Scope restricted to Project/ assembly
         //For Inheritance we have one more access specifier called protected.
+
         protected void Method4() { }//Scope is restricted to class & Derived classes
                                     //We have two more called "private protected", "protected internal" 
         private protected void Method5() { }//[private/ protected]Scope is restricted to derived classes that declared within current assembly.

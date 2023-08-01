@@ -25,7 +25,7 @@ Student{}
  */
 namespace ConsoleAppOOPS
 {
-    abstract class Student//Can't create obj for this class. We have to create Child class obj instantiat this also.
+    abstract class Student//Can't create obj for this class. We have to create Child class obj instantiate this also.
     {
         int sno;
         string name, fname, email;
@@ -47,7 +47,8 @@ namespace ConsoleAppOOPS
     class JStu:Student
     {
         int corejava, advjava;
-        public JStu(int sno, string name, string fname, string email, long phone, int corejava, int advjava):base(sno, name, fname, email, phone)
+        public JStu(int sno, string name, string fname, string email, long phone, 
+            int corejava, int advjava):base(sno, name, fname, email, phone)
         {
             this.corejava = corejava;
             this.advjava = advjava;

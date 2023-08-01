@@ -33,12 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleAppOOPS.LINQDemo2_XML</StartupObject>
+    <StartupObject>ConsoleAppOOPS.FuncActionPredicate_Delegates</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,10 +60,15 @@
     <Compile Include="Collections_HashTable.cs" />
     <Compile Include="ConstructorsDemo.cs" />
     <Compile Include="ConstructorsDemo2CopyConstru.cs" />
+    <Compile Include="DelegatesDemo1.cs" />
+    <Compile Include="DelegatesDemo2.cs" />
+    <Compile Include="EventsDemo.cs" />
+    <Compile Include="EventsDemo_Multicast.cs" />
     <Compile Include="ExceptionHandlingDemo1.cs" />
     <Compile Include="ExceptionHandlingDemo2.cs" />
     <Compile Include="ExceptionHandlingDemo3.cs" />
     <Compile Include="ExceptionHandlingDemo4.cs" />
+    <Compile Include="FuncActionPredicate_Delegates.cs" />
     <Compile Include="GenericDemo1.cs" />
     <Compile Include="GenericDemo2.cs" />
     <Compile Include="IndexerDemo.cs" />
@@ -74,7 +84,12 @@
     <Compile Include="LINQDemo.cs" />
     <Compile Include="LINQDemo2_XML.cs" />
     <Compile Include="LINQDemo2_XML2.cs" />
+    <Compile Include="LINQDemo2_XML4.cs" />
+    <Compile Include="LINQDemo2_XML3.cs" />
     <Compile Include="ListDemo.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="MulticastDelegatesDemo.cs" />
+    <Compile Include="MulticastDelegatesDemo2.cs" />
     <Compile Include="OddNoException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesDemo.cs" />
@@ -89,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
