@@ -13,6 +13,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+//Let Log4Net know that it can look for configuration 
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+//Setting XmlConfigurator as true
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
