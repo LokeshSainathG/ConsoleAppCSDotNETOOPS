@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnonymousMethod_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnonymousMethod_Form.Designer.cs">
+      <DependentUpon>AnonymousMethod_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="DispatcherDemo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnonymousMethod_Form.resx">
+      <DependentUpon>AnonymousMethod_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DispatcherDemo.resx">
       <DependentUpon>DispatcherDemo.cs</DependentUpon>
     </EmbeddedResource>

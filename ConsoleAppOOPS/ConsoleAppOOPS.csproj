@@ -10,7 +10,7 @@
     <AssemblyName>ConsoleAppOOPS</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleAppOOPS.FuncActionPredicate_Delegates</StartupObject>
+    <StartupObject>ConsoleAppOOPS.EventsDemo_Multicast</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -52,9 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnonymousMethods_Demo.cs" />
+    <Compile Include="AnonymousMethodsDemo2.cs" />
+    <Compile Include="AnonymousMethodsDemo.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="BankUse.cs" />
+    <Compile Include="CallbackMethod_DelegatesDemo.cs" />
     <Compile Include="Collections_ArrayList1.cs" />
     <Compile Include="Collections_ArrayList2.cs" />
     <Compile Include="Collections_HashTable.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="ExceptionHandlingDemo3.cs" />
     <Compile Include="ExceptionHandlingDemo4.cs" />
     <Compile Include="FuncActionPredicate_Delegates.cs" />
+    <Compile Include="FuncActionPredicate_Delegates2.cs" />
     <Compile Include="GenericDemo1.cs" />
     <Compile Include="GenericDemo2.cs" />
     <Compile Include="IndexerDemo.cs" />
@@ -80,7 +83,8 @@
     <Compile Include="InterfacesDemo.cs" />
     <Compile Include="InterfacesDemo2.cs" />
     <Compile Include="InterfacesDemo3.cs" />
-    <Compile Include="Lambda_Expressions_Demo.cs" />
+    <Compile Include="LambdaExpressions_Demo.cs" />
+    <Compile Include="LambdaExpressions_Demo2.cs" />
     <Compile Include="LINQDemo.cs" />
     <Compile Include="LINQDemo2_XML.cs" />
     <Compile Include="LINQDemo2_XML2.cs" />
@@ -88,6 +92,7 @@
     <Compile Include="LINQDemo2_XML3.cs" />
     <Compile Include="ListDemo.cs" />
     <Compile Include="Logging.cs" />
+    <Compile Include="MulticastDeleagtesDemo0.cs" />
     <Compile Include="MulticastDelegatesDemo.cs" />
     <Compile Include="MulticastDelegatesDemo2.cs" />
     <Compile Include="OddNoException.cs" />
@@ -96,6 +101,7 @@
     <Compile Include="PropertiesDemo2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InheritanceDemo6_SealedClassesMethodsDemo.cs" />
+    <Compile Include="Multicast_Rectangle.cs" />
     <Compile Include="StaticClassesDemo.cs" />
     <Compile Include="StaticConstructors.cs" />
     <Compile Include="StaticMethods.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppOOPS
 {
-    class Lambda_Expressions_Demo
+    class LambdaExpressions_Demo
     {
         public class EmployeeNew //Since we already used "Employee" class, let's use EmployeeNew
         {

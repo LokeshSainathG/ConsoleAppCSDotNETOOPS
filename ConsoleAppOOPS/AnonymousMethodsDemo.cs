@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppOOPS
 {
-    class AnonymousMethods_Demo
+    class AnonymousMethodsDemo
     {
         //Class inside class is nested class which improves Encapsulation.
         public class EmployeeNew //Since we already used "Employee" class, let's use EmployeeNew

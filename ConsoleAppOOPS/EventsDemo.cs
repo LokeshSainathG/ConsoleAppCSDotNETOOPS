@@ -17,8 +17,8 @@ namespace ConsoleAppOOPS
             Transformer t = Square;
             t += Cube;
             t.Invoke(i);
-
             //[Multicast Delegates concept]
+
             NotificationOfMethods2 obj = new NotificationOfMethods2();
             //Hooking XHandler method with Delegate object. Since Delegate defined in another class
             obj.transformerEvent += User1.XHandler;//Using the obj, we are assigning the User1 XHandler to Delegate object.
@@ -41,10 +41,10 @@ namespace ConsoleAppOOPS
         {
             if (transformerEvent != null)//Checking "transformerEvent" obj should be Instantiated.
             {
-                transformerEvent(x);//Invoking 
+                transformerEvent(x);//Invoking the Event
             }
         }
     }
     //Define 2 Subscribers (Classes): These have a Notification Confirm msg method.
-    //We defined in EventsDemo_Multicast.cs
+    //We already defined in EventsDemo_Multicast.cs
 }

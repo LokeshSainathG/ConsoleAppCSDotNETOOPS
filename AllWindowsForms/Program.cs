@@ -40,7 +40,7 @@ namespace AllWindowsForms
             //Control is the Grand parent of all these.
             Application.EnableVisualStyles(); //For my app, I am ENABLING VISUAL STYLES
             Application.SetCompatibleTextRenderingDefault(false); //For my app, Rendering Default is set to FALSE.
-            Application.Run(new DispatcherDemo()); //[IMP] When you running program or clicking START, which app need to run that info specified here.
+            Application.Run(new AnonymousMethod_Form()); //[IMP] When you running program or clicking START, which app need to run that info specified here.
             //Here we are creating an instance. Somewhere Form1 class is available in the Project and we are creating instance. So, it calls the Defult Constructor.
             //We can observe Form1.cs available in the Solution.
             /*Form1 is class file. Which is divided into 3 parts:

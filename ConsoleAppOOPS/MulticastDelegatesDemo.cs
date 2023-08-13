@@ -20,7 +20,7 @@ namespace ConsoleAppOOPS
             Console.WriteLine("Result: " + result);//Ip: 2, Op: 8
             //why only getting Cube of no, because, Square() method added first to Delegate instance. Then added Cube(). Square returns a value& Cube returns a value and Square method value is discareded. last added method to multicast delegate instance that's value will be accepted other are overridden.
             //We can print the Result of Square and then assign Cube() to the delegate instance.
-            //Solution of problem of discarding values: When you are using Multicast Delegates, the Delegate return type, methods should be void. Since previous values will be discarder by next invoking function.
+            //Solution of problem of discarding values: When you are using Multicast Delegates, the Delegate return type, method return type should be void. Since previous values will be discarded by next invoking function.
 
         }
         public static int Square(int x)
