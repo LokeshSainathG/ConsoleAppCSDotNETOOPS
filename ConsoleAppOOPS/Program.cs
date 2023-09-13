@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppOOPS
 {
-    class Program
+    class Program//Main class
     {
         static void Main(string[] args)
         {
@@ -18,7 +18,8 @@ namespace ConsoleAppOOPS
             //Because of that reason: Obj-oriented paradigms came into picture.
             //for any organisation, data security first and foremost.
             //OOP mainly concentrated on Data security.
-            /*In OOP: there are 2 imp terms
+
+            /*In OOP: there are 2 imp terms:
              * Class, Object
              * Class - Blueprint/ Template of data variables, Methods. Nothing is initialised or executed untill the object is instantiated except Main() method and not Main() method class.
              * Object - Real time entities. Memory gets allocated by creating an object to class. A class can have multiple objects. For each obj the memory is separately allocated since an obj is real time entity.
@@ -27,8 +28,8 @@ namespace ConsoleAppOOPS
              */
             Employee e1 = new Employee();//e1 is an object. Obj is called an instance of a class.
             //An obj is an entity which has properties and behaviour associated with it for identifying the state, methods for behaviour, events for descrition. 
-            //Memory gets allocated:
-            //e1.eno, e1.ename, e1.sal
+            //Memory gets allocated in the way: e1.eno, e1.ename, e1.sal
+
             Employee e2 = new Employee();
             //e2.eno, e2.ename, e2.sal - separate Memory
             //Instances won't share memory with other instance.
@@ -36,12 +37,13 @@ namespace ConsoleAppOOPS
             //new Employee() is Instance creation with the help of "new". "new" helps in allocating memory at Runtime.
             Employee e3; //Memory is not allocated for e3. Employee is user-defined type. [Obj creation done at compile time]
             int a=0;//int is pre-defined type
-            e3 = new Employee(); //Momory is instantiated for e3. [instantiation done at run time
+            e3 = new Employee(); //Memory is instantiated for e3. [instantiation done at run time
             e1.getdata();
             e1.display();
 
         }
     }
+
     class Employee//Creating new type called Employee
     {//class is internal to project by default. But if this class need to visible outside the project (using namespace/ by loading the dll) make this as public specifier
         //class can have static MethodAccessException/ normal method
@@ -62,6 +64,7 @@ namespace ConsoleAppOOPS
         {
 
         }
+    }
 
         /*OOP Principles:
         -----------------
@@ -98,5 +101,4 @@ namespace ConsoleAppOOPS
         //In Java, there is an only a single public class inside source code, or it will display compilation error.
 
         //Just-In-Time compiler(JIT) is a part of Common Language Runtime (CLR) in .NET which is responsible for managing the execution of .NET programs regardless of any .NET programming language.
-    }
 }
