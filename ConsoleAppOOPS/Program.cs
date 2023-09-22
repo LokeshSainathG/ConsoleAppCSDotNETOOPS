@@ -19,25 +19,25 @@ namespace ConsoleAppOOPS
             //for any organisation, data security first and foremost.
             //OOP mainly concentrated on Data security.
 
-            /*In OOP: there are 2 imp terms:
-             * Class, Object
+            /*In OOP: there are 2 imp terms: Class, Object
              * Class - Blueprint/ Template of data variables, Methods. Nothing is initialised or executed untill the object is instantiated except Main() method and not Main() method class.
              * Object - Real time entities. Memory gets allocated by creating an object to class. A class can have multiple objects. For each obj the memory is separately allocated since an obj is real time entity.
              * Class defines characteristics of its Objects. 
              * Class is a User-defined type. We can't access class directly.
              */
             Employee e1 = new Employee();//e1 is an object. Obj is called an instance of a class.
-            //An obj is an entity which has properties and behaviour associated with it for identifying the state, methods for behaviour, events for descrition. 
+            //An obj is an entity which has properties and behaviour associated with it properties for identifying the state, methods for behaviour, events for descrition.
+            //Event is an action (mouse click, key press) recognised by an object. we see in Win Prog.
             //Memory gets allocated in the way: e1.eno, e1.ename, e1.sal
 
             Employee e2 = new Employee();
-            //e2.eno, e2.ename, e2.sal - separate Memory
+            //e2.eno, e2.ename, e2.sal - separate Memory get created
             //Instances won't share memory with other instance.
             //Employee e2 is Object creation.
             //new Employee() is Instance creation with the help of "new". "new" helps in allocating memory at Runtime.
             Employee e3; //Memory is not allocated for e3. Employee is user-defined type. [Obj creation done at compile time]
             int a=0;//int is pre-defined type
-            e3 = new Employee(); //Memory is instantiated for e3. [instantiation done at run time
+            e3 = new Employee(); //Memory is instantiated for e3. [instantiation done at run time, Memory allocates at run-time only.]
             e1.getdata();
             e1.display();
 
@@ -66,39 +66,42 @@ namespace ConsoleAppOOPS
         }
     }
 
-        /*OOP Principles:
-        -----------------
-        Encapsulation, Data hiding, Inheritance, Polymorphism
-         * Encapsulation (Putting data, methods inside one block. 
-         * Fully Encapsulation: Object can access behaviour (methods) through the methods they can access the data memebers. It can be achieved with the help of class. Objecct can't access data members directly. Accessing Data memebers using object can be acehived by the help of Access Specifiers)
-         * Access Specifiers:
-         * public (publicly available), private (with-in class only), internal (with-in the project only), protected()
-         * class scope is internal by default. And we can change to public only
-         * class members scope is private by default. And you can make it as public or internal.
-         * 
-         * 
-         * Data hiding
-         * 
-         * 
-         * Inheritance
-         * Polymorphism 
-         * Overloading (Operator overloading, Method overloading 
-         * Operator Overloading: Predefined unary, arithmetic, equality and comparison operators
-         * https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
-         * 
-         * 
-         * What ever project you take, all are using OOPS concepts. Recollect how exactly they are using.
-         */
-        //Java vs C#:
-        //Java doesn't support for operator overloading whereas C# provides operator overloading for multiple operators.
-        //Java does not support pointers while C# supports pointer only in an unsafe mode.
-        //In Java, Arrays are a direct specialization of Object whereas arrays in C# are a specialization of System.
-        //No jump statement (goto) in Java.
-        //Lambda, generics support. Also LINQ (Language Integrated Query) Expressions in C#
+    /*OOP Principles: Encapsulation, Data hiding, Abstraction, Inheritance, Polymorphism, etc.,
+    -------------------------------------------------------------------------------------------
+    * Encapsulation (Putting data, methods together inside one block. 
+    * Fully Encapsulation: Object can access behaviour (methods) through the methods they can access the data memebers. It can be achieved with the help of class. Object can't access data members directly. Accessing Data memebers using object can be acehived by the help of Access Specifiers)
+    * 
+    * Access Specifiers:
+    * public (publicly available), private (with-in class only), internal (with-in the project only), protected()
+    * class scope is internal by default. And we can change to public only, not private bcs if private then no use of writing the class itseelf & violates OOPS.
+    * class members scope is private by default. And you can make it as public or internal.
+    * 
+    * 
+    * Data hiding:
+    * 
+    * 
+    * Inheritance:
+    * 
+    * Polymorphism: 
+    * Overloading (Operator overloading, Method overloading 
+    * Operator Overloading: [go through the concept in C# book] Predefined unary, arithmetic, equality and comparison operators
+    * https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
+    * 
+    * 
+    * What ever project you take, all are using OOPS concepts. Recollect how exactly they are using.
+    */
 
-        //No.of Public classes:
-        //In C#, there are multiple public classes included in the source code.
-        //In Java, there is an only a single public class inside source code, or it will display compilation error.
+    //Java vs C#:
+    //Java doesn't support for operator overloading whereas C# provides operator overloading for multiple operators.
+    //Java does not support pointers while C# supports pointer only in an unsafe mode.
+    //In Java, Arrays are a direct specialization of Object whereas arrays in C# are a specialization of System.
+    //No jump statement (goto) in Java.
+    //Lambda, generics support. Also LINQ (Language Integrated Query) Expressions in C# makes it so ease.
 
-        //Just-In-Time compiler(JIT) is a part of Common Language Runtime (CLR) in .NET which is responsible for managing the execution of .NET programs regardless of any .NET programming language.
+    //No.of Public classes:
+    //In C#, there are multiple public classes included in the source code.
+    //In Java, there is an only a single public class inside source code, or it will display compilation error.
+
+    //Just-In-Time compiler(JIT) is a part of Common Language Runtime (CLR) in .NET which is responsible for managing the execution of .NET programs regardless of any .NET programming language.
+    //[Go through "IMP concepts & Interview Questions" section in AdvProg word file]
 }

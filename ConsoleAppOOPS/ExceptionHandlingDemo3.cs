@@ -8,6 +8,7 @@ namespace ConsoleAppOOPS
 {
     class ExceptionHandlingDemo3
     {
+        //checked{} block OR cheked()
         static void Main()
         {
             try
@@ -29,7 +30,7 @@ namespace ConsoleAppOOPS
             Result: 1071862418
             //Result is not correct though it is not throwing Overflow exception for 'c'. Exception class also not handling
             */
-            //These kind of errors (Result of a formula overflow) are called as "ArithmeticOverflow Exceptions" and Exception class can't handle automatically, the best approach to handle is "checked block".
+            //These kind of errors (Result of a formula is overflow) are called as "ArithmeticOverflow Exceptions" and Exception class can't handle automatically, the best approach to handle is "checked block".
             /*checked
             {
                 int c = a * b;

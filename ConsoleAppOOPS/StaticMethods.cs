@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppOOPS
 {
+    class StaticDemo4
+    {
+        public StaticDemo4() { Console.WriteLine("Control is inside instance constructor"); }
+        public void display() { Console.WriteLine("Control is inside instance display() method"); }
+
+        static StaticDemo4() { Console.WriteLine("Control is inside static constructor"); }
+        public static void show() { Console.WriteLine("Control is inside static show() method"); }
+
+    }
     class StaticMethods
     {
         static void Main()
@@ -20,19 +29,11 @@ namespace ConsoleAppOOPS
             */
             //To call show(), obj is not req. Using class name we can call. Class having static method is called Static class. 
             StaticDemo4.show();
-            //Static constructore automatically executed by CLR. 
+            //Static constructors automatically executed by CLR. 
             //To call static method instant creation is not req. By using class name we can call.
             //Same static show() can present in another class. With respective class name we can call our required static method.
             //If we remember we are calling so many pre-defined static methods with their respective class names. Console.Write(), Console.Read(), Convert.ToINT32(),... All these are static members.
         }
-    }
-    class StaticDemo4
-    {
-        public StaticDemo4(){Console.WriteLine("Control is inside instance constructor");}
-        public void display(){Console.WriteLine("Control is inside instance display() method");}
-        static StaticDemo4(){Console.WriteLine("Control is inside static constructor");}
-        public static void show(){Console.WriteLine("Control is inside static show() method");}
-        
     }
 }
 /*

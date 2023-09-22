@@ -31,11 +31,13 @@ namespace ConsoleAppOOPS
             balance = amt;
             //To genarate acc no: Bank follows some rules like they use branch code, IFSC number and last 4 are user identification number.
             //Here we use "Random" pre-deifned class to generate that acc no.
+
             Random rad = new Random();
             accno=rad.Next(1000,5000);//3 overloaded versions are there. We use (min, max). It generate a random number b/w (1000, 5000)
-            //In real time projs we might have many parameters like 30/ 40. In those situations mostly they use class data members & parameters as same names. 
-            //But we have one problem with that. Firts priority is Parameter scope. To differentiate: Use "this" keyword to specify that as a class variable.
-            //Inside a class if you see "this" (for a var/ method) it represent current class member.
+
+            //In real time projs we might have many parameters like 30/ 40 parameters. In those situations mostly they use class data members & parameters as same names. 
+            //But we have one problem with that. First priority is Parameter scope. To differentiate: We use "this" keyword to specify that as a class variable.
+            //Note: Inside a class if you see "this" (for a variable/ method) it represent current class member.
             //If you give "this" unnecessaly (when class var is only one having that name), compiler won't show error. But "this" will greyed out.
             return accno;
         }
