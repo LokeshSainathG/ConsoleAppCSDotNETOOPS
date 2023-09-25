@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleAppOOPS.ExceptionHandlingDemo2</StartupObject>
+    <StartupObject>ConsoleAppOOPS.MethodOverridingDemo2</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -113,6 +113,8 @@
     <Compile Include="ListDemo.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Logging.cs" />
+    <Compile Include="MethodOverridingDemo.cs" />
+    <Compile Include="MethodOverridingDemo2.cs" />
     <Compile Include="MulticastDeleagtesDemo0.cs" />
     <Compile Include="MulticastDelegatesDemo.cs" />
     <Compile Include="MulticastDelegatesDemo2.cs" />

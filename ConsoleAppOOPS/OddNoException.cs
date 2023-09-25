@@ -11,7 +11,7 @@ namespace ConsoleAppOOPS
     {
         //"virtual" members in base class should be override in child class if you want to reuse.
         //The "override" keyword is used to extend or modify a virtual/abstract method, property, indexer, or event of base class into a derived class.
-        public override string Message 
+        public override string Message //Why we decorated override? Go through InheritanceDemo5.cs
         { 
             get
             {

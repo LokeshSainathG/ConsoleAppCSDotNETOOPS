@@ -63,5 +63,9 @@ namespace ConsoleAppOOPS
         If you just create instance for third oncstructor it calls 2nd and it calls 1st. So execution is 1st body> 2nd body > 3rd body.
         */
     }
-
+    /* C# Design Patterns: Design patterns are used to solve these commonly occurring problems in the development phase.
+     * https://www.tutorialsteacher.com/csharp/design-patterns
+     * Desigsn principles are different than design patterns. The SOLID (SRP, OCP, LSP, ISP, DIP) principles are one of the most popular sets of design principles.
+     * https://www.tutorialsteacher.com/articles/difference-between-design-principle-and-design-pattern
+     */
 }
