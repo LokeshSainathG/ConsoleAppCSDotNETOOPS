@@ -73,9 +73,11 @@ namespace AllWindowsForms
             // txtFirst
             // 
             this.txtFirst.Location = new System.Drawing.Point(364, 105);
+            this.txtFirst.Multiline = true;
             this.txtFirst.Name = "txtFirst";
             this.txtFirst.Size = new System.Drawing.Size(100, 28);
             this.txtFirst.TabIndex = 3;
+            this.txtFirst.TextChanged += new System.EventHandler(this.txtFirst_TextChanged);
             // 
             // txtSecond
             // 

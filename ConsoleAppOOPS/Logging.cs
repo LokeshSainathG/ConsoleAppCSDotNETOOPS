@@ -12,12 +12,15 @@ namespace ConsoleAppOOPS
     public class Logging
     {
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        //Created object of Interface ILog of Log4Net Library. To use Log4Net, we just need to write this line at start of class or at Constructor.
         //OR
         /*
         static Logging()
         {
             Log = LogManager.GetLogger("logger");
         }*/
+        //If you instantiate the object like this, you no need to instantiate in each class, directly you can use. Same we are doing in Logger.cs
+
         static void Main()
         {
             try

@@ -8,14 +8,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppOOPS
 {
-    public static class Logger
+    public static class Logger//Static CLass
     {
-        private static readonly ILog log;
-        static Logger()
+        private static readonly ILog log;//Static object
+        static Logger()//Static Constructor
         {
             log = LogManager.GetLogger("logger");
 
         }
+
+        ///////////////// Static methods: /////////////////
 
         public static void configureLogFileName(string fileNamePath)
         {

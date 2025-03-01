@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace AllWindowsForms
 {
-    public partial class Form1 : Form//Form1 is inheriting from another pre-defined base class called "FORM". Again it is inheriting from ContainerControl class 
+    public partial class Form1 : Form//Form1 is inheriting from another pre-defined base class called "FORM". Again, it is inheriting from ContainerControl class 
     {
         public Form1()
         {
@@ -35,7 +35,7 @@ namespace AllWindowsForms
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            MessageBox.Show("Mouse Hover on  button");
+            MessageBox.Show("Mouse Hover on button");
         }
     }
 }

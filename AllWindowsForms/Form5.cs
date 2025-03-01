@@ -24,11 +24,11 @@ namespace AllWindowsForms
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            BindDropDown(); 
+            BindDropDown();
             Count();
             //When Form is loaing these 2 methods gets invoke. All items added into ComboBox (Dropdown), Count shows no.of items in ListBox not Dropdown.
         }
-        private void BindDropDown()//To add some Items into ComboBox (Dropdown)
+        private void BindDropDown()//To add some Items into ComboBox (DropDown)
         {
             cmbItems.Items.Add("Monitor");
             cmbItems.Items.Add("Keyboard");
@@ -40,15 +40,15 @@ namespace AllWindowsForms
             cmbItems.Items.Add("Headset");
             cmbItems.Items.Add("UPS");
         }
-        private void Count()//We can use Count() when something is inserting into ListBox, deleting we invoke. This is the reason we are writing in a method.
+        private void Count()//We can use Count() when something is inserting into ListBox, deleting we invoke. This is the reason we are writing as a separate method.
         {
             lblCount.Text = "No of Items = "+lstItems.Items.Count;
-            /*ComboBox, ListBox - Items Property - Items is a Collection type of Property. 
-            Since Items is a collection type, some pre-defined methods available:
+            /*ComboBox, ListBox - have "Items" Property - "Items" is a Collection type of Property. 
+            Since Items is a collection type, some pre-defined methods available for collections:
             Items.Add() - To add an item
             Items.Remove()- To remove an item
-            Items.Count - To count items in the collection Items.
-            Items.Clear() - To clear an Item
+            Items.Count - To know the count of items in the collection.
+            Items.Clear() - To clear all Items
             */
         }
 
@@ -57,7 +57,7 @@ namespace AllWindowsForms
             //combobox selected item is going to add into ListBox items.
             lstItems.Items.Add(cmbItems.SelectedItem);
             //SelectedItem OR SelectedValue both are ok. It return what item we selected.
-            //After adding into ListBox, we want that item to remove from ComboBox. 
+            //After adding into ListBox, we want that item to be removes from ComboBox. 
             cmbItems.Items.Remove(cmbItems.SelectedItem);
             Count();
         }
@@ -68,7 +68,7 @@ namespace AllWindowsForms
             {
                 lstItems.Items.Add(txtItem.Text);
                 txtItem.Text = "";//OR
-                txtItem.Clear();
+                txtItem.Clear();//After adding new item into ListBox, we need to clear the TextBox.
                 //After adding into ListBox, we have to clear the TextBox.
                 Count(); //Increase no.of Items in ListBox.
             }
@@ -77,9 +77,9 @@ namespace AllWindowsForms
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (lstItems.SelectedItem != null)
+            if (lstItems.SelectedItem != null)//If you select some item then only it should remove.
             {
-                //Before removing only we need to move back that selected item to ComboBox.
+                //Before removing only we need to move back that selected item to ComboBox. otherwise we can't catch that item.
                 cmbItems.Items.Add(lstItems.SelectedItem);
                 //ListBox selected item should remove from it.
                 lstItems.Items.Remove(lstItems.SelectedItem);

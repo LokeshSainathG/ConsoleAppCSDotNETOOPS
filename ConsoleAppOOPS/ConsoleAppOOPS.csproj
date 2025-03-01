@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConsoleAppOOPS.MethodOverridingDemo2</StartupObject>
+    <StartupObject>ConsoleAppOOPS.LINQDemo2_XML5</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -110,6 +110,7 @@
     <Compile Include="LINQDemo2_XML2.cs" />
     <Compile Include="LINQDemo2_XML4.cs" />
     <Compile Include="LINQDemo2_XML3.cs" />
+    <Compile Include="LINQDemo2_XML5.cs" />
     <Compile Include="ListDemo.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Logging.cs" />

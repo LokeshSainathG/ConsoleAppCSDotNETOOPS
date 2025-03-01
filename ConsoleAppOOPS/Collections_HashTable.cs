@@ -14,8 +14,8 @@ namespace ConsoleAppOOPS
             //If you want to store Homogeneous type of data - prefer Array
             //If you want to store Heterogeneous type of data - prefer ArrayList OR List<object> for good performance
             //HashTable not that much flexible like that of ArrayList.
-            //In Hashtable, to store & retrieve the data it uses Hashing Algorithm.
-
+            //Advantage is Hashing algorithm: In Hashtable, to store & retrieve the data it uses Hashing Algorithm.
+            //Another advantage is index is User-defined unlike Array, ArrayList.
             Hashtable ht = new Hashtable();
             ht.Add("eno", 1000);//(key, value) Key is like user-defined index.
             ht.Add("ename", "vamsi");
@@ -23,21 +23,30 @@ namespace ConsoleAppOOPS
             ht.Add("Role", "Project engg");
 
             //Prefer Hashtable only when you want user-defined index.
-            //AddRange, is not available for Hashtable.
+            //AddRange, is not available for Hashtable because we need to give Index also.
             //Bcs, while storing it follows hashing algorithm, it won't support.  
-            //Insert(), RemoveAt(), RemoveRange() also not available.
+            //Insert(), InsertRange(), RemoveAt(), RemoveRange() also not available.
+            //For Remove() we specify key instead of element.
 
             //To access data in Hashtable, we need key.
-            foreach (var item in ht.Keys)//Storing, retriving, removing done using Keys.
-                Console.WriteLine(item + " - "+ht[item]);//ht is constructor of HashTable, item is key.
+            foreach (var key in ht.Keys)//Storing, retriving, removing done using Keys.
+                Console.WriteLine(key + " - "+ht[key]);//ht is object of HashTable, key is key. using key, we are getting data. Directly we can't fetch this is security.
             /*Output:
             eno - 1000
             sal - 75000
             Role - Project engg
             ename - vamsi
-            *Output order is different than Input.
+            *Output order is different than Input. This is Hashing algo, it stores in different order not like how we enter the data.
+            
+            What is hashing algorithm in C#?
+            Hashing in cryptography is a process of mapping a binary string of an arbitrary length to a small binary string of a fixed length, known as a hash value, a hash code, or a hash. 
+
+            What is ht.Keys: HT takes key - value. Array/ AL have pre-defined integer index associated with data. ht.Keys is index for ht HashTable.
+            In Arrays/ AL: al[1]/ al[2] we use
+            ///y in HT: ht[key] we use
             */
 
+            //We can get the HashCode of any variable.
             int a = 100;
             Console.WriteLine("Hash code of int a: " + a.GetHashCode());//Every variable is having some HashCode. 
             int eno = 1000; string ename = "Lokesh"; int sal = 75000; string role = "Project engg";
@@ -46,8 +55,8 @@ namespace ConsoleAppOOPS
                 "\nHash code of sal: " + sal.GetHashCode() +
                 "\nHash code of role: " + role.GetHashCode());
             //Hashing algorithm will applied to that Hash code, based on that it store in the Hash table [Ascending order of HashCode].
-            foreach (var item in ht.Keys)
-                Console.WriteLine(item + " - " + ht[item].GetHashCode());//We are 
+            foreach (var key in ht.Keys)
+                Console.WriteLine(key + " - " + ht[key].GetHashCode());
 
 
             ht.Remove("eno");//It expects 'key' not value.

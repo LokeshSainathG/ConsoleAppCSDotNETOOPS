@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
 namespace ConsoleAppOOPS
 {
@@ -22,7 +18,7 @@ namespace ConsoleAppOOPS
             al.Add(4560);
             al.Add("Lokesh Sainath");
             Console.WriteLine(al.Capacity);//4. Till here 4 elements
-
+            
             al.Add("G");
             Console.WriteLine(al.Capacity);//8
             al.Add(6); al.Add(7); al.Add(8);
@@ -56,6 +52,13 @@ namespace ConsoleAppOOPS
              * It is not recommended to use ArrayList class due to performance issue. Instead, use List<object> to store Hetrogeneous objects. List is more memory-efficient than ArrayList because it doesn't have to store an object reference for every element in the collection.
              * To store data of same type/ Homogeneous, use Generic List<T> OR Array if you know array size.
              */
+
+            //char is 2 bytes, int is 4 bytes, double is 8 bytes
+            //Since string, object are reference types they contain address only.
+            //object is 4 byte adress bytes.
+            //string is 4 byte adress bytes.
+            Console.WriteLine("Size of Integer:" + sizeof(int));
+            //Console.WriteLine("Size of String:" + sizeof(string));//Error: bcs it is reference type.
         }
     }
 }

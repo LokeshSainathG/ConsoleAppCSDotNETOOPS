@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AllWindowsForms
@@ -29,15 +22,21 @@ namespace AllWindowsForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //It is imp to put code in try-catch blocks.
-            try 
+            try
             {
+                if (txtFirst.Text == String.Empty || txtSecond.Text == "")
+                    throw new InputEmptyException();
+
                 //int a = Convert.ToInt32(txtFirst.Text);
                 //int b = Convert.ToInt32(txtSecond.Text);
                 //int c = a + b;
                 //txtResult.Text = Convert.ToString(c);
                 //Text box format the data in the form of String
+
+                //Above can be simplified as: We saved Memory also.
                 txtResult.Text = (Convert.ToInt32(txtFirst.Text)+ Convert.ToInt32(txtSecond.Text)).ToString();
 
+                //So, always make a habit to reduce the no.of lines of code. Though you have written in lengthy manner after writing the logic, reduce it wherever req. Try to use less no of var's.
             }
             catch (Exception ex)
             {
@@ -54,6 +53,8 @@ namespace AllWindowsForms
         {
             try
             {
+                if (txtFirst.Text == String.Empty || txtSecond.Text == String.Empty)
+                    throw new InputEmptyException();
                 txtResult.Text = (Convert.ToInt32(txtFirst.Text) - Convert.ToInt32(txtSecond.Text)).ToString();
             }
             catch(Exception ex)
@@ -66,6 +67,8 @@ namespace AllWindowsForms
         {
             try
             {
+                if (txtFirst.Text == String.Empty || txtSecond.Text == String.Empty)
+                    throw new InputEmptyException();
                 txtResult.Text = (Convert.ToInt32(txtFirst.Text) * Convert.ToInt32(txtSecond.Text)).ToString();
             }
             catch (Exception ex)
@@ -78,11 +81,31 @@ namespace AllWindowsForms
         {
             try
             {
+                if (txtFirst.Text == String.Empty || txtSecond.Text == String.Empty)
+                    throw new InputEmptyException();
                 txtResult.Text = (Convert.ToInt32(txtFirst.Text) /Convert.ToInt32(txtSecond.Text)).ToString();
             }
             catch (Exception ex)
             {
                 lblError.Text = ex.Message;
+            }
+        }
+
+        private void txtFirst_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+    /// <summary>
+    /// User-defined Exception:
+    /// </summary>
+    class InputEmptyException : Exception
+    {
+        public override string Message
+        {
+            get
+            {
+                return "Please enter First no, Second no";
             }
         }
     }
